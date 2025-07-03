@@ -1,0 +1,31 @@
+namespace contraseña
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int intentos = 0;
+            string contraseña;
+            bool contraseñaDescubierta = false;
+
+            do
+            {
+                Console.WriteLine("Ingresa la contraseña");
+                contraseña = Console.ReadLine();
+                intentos++;
+                if (contraseña != "1234")
+                {
+                    Console.WriteLine("Contraseña  es incorrecta.");
+                }
+                else
+                {
+                    Console.WriteLine("Contraseña es correcta.");
+                    contraseñaDescubierta = true;
+                }
+            } while (contraseñaDescubierta == false && intentos < 3);
+
+
+            Console.WriteLine("listo");
+        }
+    }
+}
