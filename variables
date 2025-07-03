@@ -1,0 +1,44 @@
+namespace VARIABLES
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int fecha;
+            string nombre;
+            float edad = 1f;
+
+            Console.WriteLine("Ingresa tu nombre:");
+            nombre = Console.ReadLine();
+
+            Console.WriteLine("Ingresa tu año de nacimiento:");
+            fecha = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingresa tu edad (edad.meses)");
+            edad = float.Parse(Console.ReadLine());
+
+
+            if (fecha < 2000)
+            {
+                Console.WriteLine("Naciste antes del segundo milenio.");
+            }
+            else if (fecha < 2018)
+            {
+                Console.WriteLine("Naciste antes de la pandemia.");
+            }
+            else
+            {
+                Console.WriteLine("Naciste después de la pandemia.");
+            }
+
+            Console.WriteLine("¿Cuántos lustros has vivido?");
+
+            int contador = 0;
+            for (int i = 0; i <= edad; i += 5)
+            {
+                Console.WriteLine($"{contador} lustro");
+                contador++;
+            }
+        }
+    }
+}
